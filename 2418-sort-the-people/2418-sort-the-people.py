@@ -13,7 +13,37 @@ class Solution:
         for i in range(len(heights)):
             new_names[i] =names[heights.index(heights2[-1-i])]
         return new_names
-            
+
+#                       using hash map
+        
+#         dic = {}
+#         ans = []
+#         for idx , height in enumerate(heights):
+#             dic[height] = names[idx]
+#         heights.sort(reverse=True)     
+#         # heights = [180 , 170 ,165]
+#         for  height in heights:
+#             ans.append(dic[height])
+        
+#         return ans
+        
+    
+    
+    
+    
+        
+        
+#         d = {}
+#         for idx, height in enumerate(heights):
+#             d[height] = names[idx]
+        
+#         heights.sort(reverse=True)
+        
+#         res = []
+#         for height in heights:
+#             res.append(d[height])
+        
+#         return res
             
                     
                     
