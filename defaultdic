@@ -1,0 +1,9 @@
+from collections import defaultdict
+
+n , m = map(int , input().split())
+defdic = defaultdict(list)
+for i in range(n):
+    defdic[input()].append(i+1)
+for j in range(m):
+    l = defdic[input()]
+    print (*l) if l else -1
