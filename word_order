@@ -1,0 +1,10 @@
+num = int(input())
+words = [input().strip() for _ in range(num)]
+dicc = {}
+for i in words:
+    if i in dicc:
+        dicc[i]+=1
+    else:
+        dicc[i] =1
+print(len(dicc))
+print(*list(dicc.values()))
