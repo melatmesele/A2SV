@@ -1,0 +1,12 @@
+setA = set(map(int , input().split()))
+num = int(input())
+ans = True
+for i in range(num):
+    set1 = set(map(int , input().split()))
+    
+    for j in set1:
+        if j not in setA or len(setA) <= len(set1):
+            ans = False
+    if not ans:
+        break 
+print(ans)
