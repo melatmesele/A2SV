@@ -1,0 +1,11 @@
+from# from collections import Counter
+k = int(input())
+num = list(map(int , input().split()))
+dic= {}
+ for  i in num:
+    if i not in dic.keys():
+      dic[i] = 0
+    dic[i] +=1
+ for x , y  in Counter(dic.items()):
+     if y == 1:
+         print(x)
