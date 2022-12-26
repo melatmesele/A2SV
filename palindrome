@@ -1,0 +1,26 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        new = str(x)
+
+        newh = new[::-1]
+        x= str(x)
+        if newh == x:
+            return True
+        # num = x
+        # ans = []
+        # if num == 0:
+        #     return True
+        
+        # while(num >=1):
+        #     ans.append(num%10)
+        #     num //= 10
+        # if not ans:
+        #     return False
+        # left  , right = 0 , len(ans)-1
+
+        # while(left < right):
+        #     if ans[left] != ans[right]:
+        #         return False
+        #     left +=1
+        #     right -=1
+        # return True
