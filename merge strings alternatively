@@ -1,0 +1,19 @@
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        ans = ""
+        lenA ,lenB = len(word1) ,len(word2)
+      
+        a = min( lenA,lenB )
+        b = max( lenA , lenB)
+        c = b - a
+        for i in range(a):
+            ans =ans + word1[i] + word2[i]
+         
+        if c > 0:
+            if len(word1) < len(word2):
+                 ans += word2[-c:]
+            elif len(word2) < len(word1):
+                 ans += word1[-c:]
+        return ans
+
+
