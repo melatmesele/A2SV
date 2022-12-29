@@ -1,0 +1,13 @@
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        # salary.sort()
+        # # salary.pop(0)
+        # # salary.pop(-1)
+        # sum = 0
+        # # for x in salary:
+        # #     sum += x
+        # for x in range(1 , len(salary)-1):
+        #     sum += salary[x]
+        # ave = sum / (len(salary)-2)
+        # return ave
+        return (sum(salary)-max(salary) - min(salary)) /(len(salary)-2)
