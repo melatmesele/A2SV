@@ -1,0 +1,21 @@
+class Solution:
+    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:
+        for num in range(left , right + 1):
+            flag = False
+            for first , last in ranges:
+                if first <= num <= last:
+                    flag = True
+                    break
+            if flag == False:
+                break
+
+        return flag
+            
+    
+
+
+
+
+
+
+
