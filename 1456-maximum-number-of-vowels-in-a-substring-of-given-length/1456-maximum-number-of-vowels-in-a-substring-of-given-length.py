@@ -9,17 +9,18 @@ class Solution:
             if s[right] in dic:
                 bcount += 1
             right += 1
-        acount = bcount
+        # acount = bcount
         maxcount = bcount
         left = 0
+        
         while right < len(s):
             if s[left] in dic:
-                acount -= 1
+                bcount -= 1
             if s[right] in dic:
-                acount += 1
+                bcount += 1
             left += 1
             right += 1
-            maxcount = max(maxcount , acount)
+            maxcount = max(maxcount , bcount)
         return maxcount
             
         
