@@ -1,28 +1,80 @@
 class Solution:
     def countGoodSubstrings(self, s: str) -> int:
-        dic = defaultdict(int)
-        counter = 0
+        count = 0
         left = 0
-        if len(s) < 3:
+        dic = defaultdict(int)
+        if len(s)< 3:
             return 0
         for i in range(3):
             dic[s[i]] += 1
-        if len(dic) == 3:
-            counter += 1
+        if len(dic)== 3:
+            count = 1
         
         for i in range(3 , len(s)):
-            
-            
             dic[s[i]] += 1
             dic[s[left]] -= 1
             
+            
             if dic[s[left]] == 0:
                 del dic[s[left]]
+            left += 1
             
             if len(dic) == 3:
-                counter += 1
-            left += 1
-        return counter
+                count += 1
+        return count
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         dic = defaultdict(int)
+#         counter = 0
+#         left = 0
+#         if len(s) < 3:
+#             return 0
+#         for i in range(3):
+#             dic[s[i]] += 1
+#         if len(dic) == 3:
+#             counter += 1
+        
+#         for i in range(3 , len(s)):
+            
+            
+#             dic[s[i]] += 1
+#             dic[s[left]] -= 1
+            
+#             if dic[s[left]] == 0:
+#                 del dic[s[left]]
+            
+#             if len(dic) == 3:
+#                 counter += 1
+#             left += 1
+#         return counter
         
         
         
