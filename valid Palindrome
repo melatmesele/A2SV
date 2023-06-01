@@ -1,0 +1,22 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        new = ''
+        f = "1".lower()
+
+        for i in s:
+            if i.isupper():
+                new += i.lower()
+            elif i.isalnum():
+                new += i
+        left , right = 0 , len(new)-1
+        print(new)
+        while(left <= right):
+            if new[left] != new[right]:
+                return False
+            else:
+                left += 1
+                right -= 1
+        return True
+                
+            
+                
