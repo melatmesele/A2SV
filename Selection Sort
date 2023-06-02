@@ -1,0 +1,19 @@
+class Solution: 
+    def select(self, arr, i):
+        # code here 
+        minIdx = i
+        for idx in range(i+1, len(arr)):
+            if arr[minIdx] > arr[idx]:
+                minIdx = idx
+        
+        return minIdx
+            
+    
+    def selectionSort(self, arr,n):
+        #code here
+        for i in range(n):
+            idx = self.select(arr,i)
+            arr[i], arr[idx] = arr[idx], arr[i]
+            
+        return arr
+
