@@ -1,0 +1,14 @@
+class Solution:
+    def maxCoins(self, piles: List[int]) -> int:
+        piles.sort()
+        left = 0
+        
+        right = len(piles)-2
+        result = 0
+        if len(piles) == 3:
+            return piles[1]
+        while(right > left):
+            result += piles[right]
+            left += 1
+            right -= 2
+        return result
