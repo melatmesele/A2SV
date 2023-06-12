@@ -1,0 +1,12 @@
+if head == None:
+            return 
+        dummyNode = ListNode(-1000 ,None)
+        prev = dummyNode
+        curr = head
+        while(curr):
+            if prev.val != curr.val:
+                prev.next = curr
+                prev = curr
+            curr = curr.next
+        prev.next = None
+        return dummyNode.next
