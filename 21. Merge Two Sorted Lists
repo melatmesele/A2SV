@@ -1,0 +1,41 @@
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode()
+        temp = dummy
+        
+        left = list1
+        right = list2
+        if left == None:
+            return right
+        elif right == None:
+            return left
+        
+        while(left or right):
+            if left and right:
+                if left.val <= right.val:
+                    temp.next = left
+                    temp = left
+                    left = left.next
+                else:
+                    temp.next = right
+                    temp = right
+                    right = right.next
+            elif left and right == None:
+                while(left):
+                    temp.next = left
+                    temp = left
+                    left = left.next
+                temp.next = None
+                
+                
+            elif right and left == None:
+                while(right):
+                    temp.next = right
+                    temp = right
+                    right = right.next
+                temp.next = None
+        return dummy.next
+           
+                
+        
+        
