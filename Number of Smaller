@@ -1,0 +1,20 @@
+num1, num2 = map(int ,input().split())
+line_one= list(map(int ,input().split())) 
+line_two = list(map(int ,input().split()))  
+counter ,top_pointer ,low_pointer = 0,0,0
+result = []
+ 
+while(top_pointer <= len(line_one )-1 and low_pointer <= len(line_two )-1):
+    if line_one[top_pointer] < line_two[low_pointer]:
+        counter += 1
+        top_pointer += 1
+    else:
+        result.append(counter)
+        low_pointer += 1
+diff = (len(line_two )) - low_pointer
+if diff > 0:
+    for i in range(diff):
+        result.append(counter)
+ 
+ 
+print( *result)
