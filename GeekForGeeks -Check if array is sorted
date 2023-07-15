@@ -1,0 +1,19 @@
+
+class Solution:
+    def arraySortedOrNot(self, arr, n):
+        # code here
+        minim = arr[0]
+        left = 0
+        right = 1
+        
+        if n == 1:
+            return 1
+        while(right <= n-1):
+            if arr[left] > arr[right]:
+                return 0
+            else:
+                if minim > arr[left]:
+                    return 0
+            right += 1
+            left += 1
+        return 1
