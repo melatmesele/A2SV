@@ -1,0 +1,18 @@
+new_set = set()
+        left = 0
+        right = 0
+        longest = 0
+        
+
+        while(right <= len(s)-1):
+            if s[right] not in new_set:
+                new_set.add(s[right])
+                right += 1
+                # print(new_set)
+            else:
+                new_set.remove(s[left])
+                # new_set.add(s[right])
+                left += 1
+            longest = max(longest , (right-left))
+            
+        return longest
