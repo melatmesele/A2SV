@@ -1,0 +1,14 @@
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # using recursion
+        if not head:
+            return None
+        dummy_node = head
+
+        if head.next:
+            dummy_node = self.reverseList(head.next)
+            head.next.next = head
+            print( "1",head)
+        head.next = None
+
+        return dummy_node
